@@ -1,0 +1,149 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $footerBackgroundColor;
+
+  &__container {
+    display: flex;
+  }
+
+  &__call {
+    margin-left: 70px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    margin-top: 12px;
+
+    font-weight: $boldWeight;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: $mediumLetterSpacing;
+    text-transform: uppercase;
+
+    color: $backgroundColor;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+
+    margin-left: 12px;
+    padding: 10px 28px;
+
+    border: none;
+    border-radius: 4px;
+
+    font-family: $basicFont;
+    font-style: normal;
+    font-weight: $boldWeight;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: $largeLetterSpacing;
+
+    color: $backgroundColor;
+    background-color: $accentColor;
+
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover {
+      background-color: $buttonHoverColor;
+    }
+
+    &:focus {
+      background-color: $buttonHoverColor;
+    }
+  }
+
+  &__form {
+    margin-left: 93px;
+  }
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+
+    font-weight: $regularWeight;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: $mediumLetterSpacing;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+
+    color: $backgroundColor;
+    background-color: $footerBackgroundColor;
+    outline-color: $backgroundColor;
+  }
+
+  &__label {
+    &:hover {
+      outline: 1px;
+      outline-color: $backgroundColor;
+    }
+
+    &:focus {
+      outline: 1px;
+      outline-color: $backgroundColor;
+    }
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
+}
+
+.address {
+  &__list .address__item + .address__item {
+    margin-top: 9px;
+  }
+
+  &__link {
+    font-family: $basicFont;
+    font-weight: $regularWeight;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: $mediumLetterSpacing;
+
+    color: $footerTextColor;
+
+    transition: color 250ms var(--timing-function);
+
+    &:hover {
+      color: $accentColor;
+    }
+
+    &:focus {
+      color: $accentColor;
+    }
+
+    &--white {
+      color: $backgroundColor;
+    }
+  }
+}
+
+.social {
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    color: $backgroundColor;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms var(--timing-function);
+  }
+
+  &__list--gray {
+    padding: 0;
+  }
+}
