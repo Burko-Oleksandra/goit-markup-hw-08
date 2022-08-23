@@ -5,28 +5,41 @@
   background-color: $footerBackgroundColor;
 
   &__container {
-    padding-bottom: 200px;
-    padding-top: 200px;
-    padding-left: 252px;
-    padding-right: 252px;
+    padding: 118px 15px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 118px 204px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 200px 252px;
+    }
   }
 
   &__title {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
 
     font-weight: $blackWeight;
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: 1.6;
     text-align: center;
     letter-spacing: $largeLetterSpacing;
     text-transform: uppercase;
 
     color: $backgroundColor;
+
+    @media screen and (min-width: $desktop) {
+      max-width: none;
+      font-size: 44px;
+      line-height: 1.4;
+    }
   }
 
   &__button {
-    display: flex;
-
+    display: block;
     margin-left: auto;
     margin-right: auto;
 
@@ -36,10 +49,14 @@
 
     font-family: $basicFont;
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 10px 24px;
     text-align: center;
 
     color: $backgroundColor;
+
+    @media screen and (min-width: $desktop) {
+      padding: 10px 32px;
+    }
 
     &--blue {
       font-weight: $boldWeight;
@@ -67,7 +84,7 @@
 
 .image {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
 
   margin-left: auto;
   margin-right: auto;
@@ -77,4 +94,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media screen and (min-width: $desktop) {
+    height: 600px;
+  }
 }

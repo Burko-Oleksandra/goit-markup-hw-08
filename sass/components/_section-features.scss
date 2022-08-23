@@ -4,44 +4,84 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+    }
   }
 
   &__item {
-    width: 270px;
-    margin-right: 30px;
+    max-width: 450px;
+    height: 100%;
+    text-align: center;
 
-    &:nth-child(4n) {
-      margin-right: 0;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      width: 354px;
+
+      text-align: left;
+
+      &:nth-child(odd) {
+        margin-right: 15px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+      margin-right: 30px;
+
+      text-align: left;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
     }
   }
 
   &__icon {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 270px;
     height: 120px;
-    padding: 0;
+    padding: 25px 15px;
     margin-bottom: 30px;
 
     border: 0;
     border-radius: 4px;
 
     background-color: $secondaryBackgroundColor;
+
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+    }
   }
 }
 
-.benefits__title {
-  margin-bottom: 10px;
+.benefits {
+  // max-width: 450px;
 
-  font-weight: $boldWeight;
-  font-size: 14px;
-  line-height: 1.2;
-  text-transform: uppercase;
+  &__title {
+    margin-bottom: 10px;
 
-  color: $titleTextColor;
+    font-weight: $boldWeight;
+    font-size: 14px;
+    line-height: 1.7;
+    text-transform: uppercase;
+
+    color: $titleTextColor;
+  }
+
+  &__text {
+    text-align: left;
+  }
 }
