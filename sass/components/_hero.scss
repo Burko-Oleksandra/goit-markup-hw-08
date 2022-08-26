@@ -4,9 +4,20 @@
 
   background-color: $footerBackgroundColor;
 
+  &__container {
+    padding: 118px 60px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 118px 204px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 200px 252px;
+    }
+  }
+
   &__title {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto auto;
     margin-bottom: 30px;
 
     font-weight: $blackWeight;

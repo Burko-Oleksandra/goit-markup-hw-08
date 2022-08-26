@@ -12,119 +12,127 @@
       width: 100%;
       height: 80px;
     }
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-
-  &__list {
-    display: none;
-    @media screen and (min-width: $tablet) {
-      display: flex;
-      margin-left: 88px;
-    }
-
-    @media screen and (min-width: $desktop) {
-      margin-left: 93px;
-    }
-
-    & .navigation__item + .navigation__item {
-      margin-left: 50px;
-    }
   }
 
-  &__link {
-    position: relative;
-    display: block;
-
-    font-weight: $mediumWeight;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: $titleTextColor;
-
-    transition: color 250ms $timingFunction;
-
-    &:hover {
-      color: $accentColor;
-    }
-
-    &:focus {
-      color: $accentColor;
-    }
-
-    &--active {
-      color: $accentColor;
-
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-
-        width: 100%;
-        height: 4px;
-
-        border-radius: 2px;
-
-        background: $accentColor;
-
-        transform: translateY(1px);
-      }
-    }
-  }
-}
-
-.auth {
-  &__list {
-    display: none;
-
-    @media screen and (min-width: $tablet) {
-      display: inline-flex;
-      flex-wrap: wrap;
-      align-items: center;
-      
-      margin-left: auto;
-      gap: 10px;
-    }
-
-    @media screen and (min-width: $desktop) {
-      & .auth__item + .auth__item {
-        margin-left: 30px;
-      }
-    }
-  }
-
-  &__link {
+  .navigation {
     display: flex;
     align-items: center;
-    justify-content: center;
 
-    font-weight: $mediumWeight;
-    font-size: 14px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+    &__list {
+      display: none;
+      @media screen and (min-width: $tablet) {
+        display: flex;
+        margin-left: 88px;
+      }
 
-    color: $primaryTextColor;
+      @media screen and (min-width: $desktop) {
+        margin-left: 93px;
+      }
 
-    transition: color 250ms $timingFunction;
-
-    &:hover {
-      color: $accentColor;
+      & .navigation__item + .navigation__item {
+        margin-left: 50px;
+      }
     }
 
-    &:focus {
-      color: $accentColor;
+    &__link {
+      position: relative;
+      display: block;
+
+      font-weight: $mediumWeight;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+
+      padding-top: 32px;
+      padding-bottom: 32px;
+      color: $titleTextColor;
+
+      transition: color 250ms $timingFunction;
+
+      &:hover {
+        color: $accentColor;
+      }
+
+      &:focus {
+        color: $accentColor;
+      }
+
+      &--active {
+        color: $accentColor;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
+          width: 100%;
+          height: 4px;
+
+          border-radius: 2px;
+
+          background: $accentColor;
+
+          transform: translateY(1px);
+        }
+      }
     }
   }
 
-  &__icon {
-    margin-right: 10px;
+  .auth {
+    &__list {
+      display: none;
 
-    fill: currentColor;
+      @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin-left: auto;
+        width: 160px;
+        gap: 10px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+
+        & .auth__item + .auth__item {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: $mediumWeight;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+
+      color: $primaryTextColor;
+
+      transition: color 250ms $timingFunction;
+
+      &:hover {
+        color: $accentColor;
+      }
+
+      &:focus {
+        color: $accentColor;
+      }
+    }
+
+    &__icon {
+      margin-right: 10px;
+
+      fill: currentColor;
+    }
   }
 }
