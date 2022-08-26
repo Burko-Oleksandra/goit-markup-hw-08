@@ -1,15 +1,4 @@
 .client {
-  &__container {
-    max-width: 480px;
-
-    @media screen and (min-width: $tablet) {
-      max-width: 768px;
-    }
-    @media screen and (min-width: $desktop) {
-      max-width: 1200px;
-    }
-  }
-
   &__title {
     margin-bottom: 30px;
 

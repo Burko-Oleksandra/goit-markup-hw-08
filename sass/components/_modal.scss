@@ -12,6 +12,8 @@
   width: 100%;
   height: 100%;
 
+  overflow-y: scroll;
+
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: opacity 500ms $timingFunction;
@@ -38,7 +40,8 @@
 
   max-width: 450px;
   width: 100%;
-  height: 609px;
+  max-height: 609px;
+  height: 100%;
 
   border-radius: 4px;
 
@@ -242,9 +245,9 @@
     }
 
     &:checked + .checkbox__icon {
-      border-color: var(--accent-color);
+      border-color: $accentColor;
 
-      background-color: var(--accent-color);
+      background-color: $accentColor;
       background-image: url('../images/check.svg');
       background-size: contain;
       background-origin: border-box;

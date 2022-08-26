@@ -33,7 +33,7 @@
 
     transition-property: background-color, color, box-shadow;
     transition-duration: 250ms;
-    transition-timing-function: var(--timing-function);
+    transition-timing-function: $timingFunction;
 
     &:hover {
       cursor: pointer;
