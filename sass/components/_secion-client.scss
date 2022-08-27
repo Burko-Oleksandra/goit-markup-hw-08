@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: center;
 
+    // min-width: 120px;
     width: 210px;
     height: 92px;
 
@@ -69,7 +70,6 @@
 
     @media screen and(min-width: $desktop) {
       width: 170px;
-      padding: 16px 32px;
     }
   }
 
