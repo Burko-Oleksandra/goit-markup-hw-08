@@ -18,8 +18,8 @@
     <link href="./css/main.min.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="page">
-      <div class="container page__container">
+    <header class="header">
+      <div class="container header__container">
         <nav class="navigation">
           <a href="./index.html" class="logo"><span class="logo__accent">Web</span>Studio</a>
           <ul class="navigation__list">
@@ -34,24 +34,107 @@
             </li>
           </ul>
         </nav>
-        <ul class="auth__list">
-          <li class="auth__item">
-            <a href="mailto:info@devstudio.com" class="auth__link">
-              <svg class="auth__icon" width="16px" height="12px">
+        <ul class="contact">
+          <li class="contact__item">
+            <a href="mailto:info@devstudio.com" class="contact__link">
+              <svg class="contact__icon" width="16px" height="12px">
                 <use href="./images/icons.svg#mail"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="auth__item">
-            <a href="tel:+380961111111" class="auth__link">
-              <svg class="auth__icon" width="10px" height="16px">
+          <li class="contact__item">
+            <a href="tel:+380961111111" class="contact__link">
+              <svg class="contact__icon" width="10px" height="16px">
                 <use href="./images/icons.svg#mobile"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <div class="mob-menu">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40"><use href="./images/icons.svg#menu"></use></svg>
+          </button>
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#cross"></use>
+              </svg>
+            </button>
+            <div class="mobile">
+              <ul class="mobile-menu">
+                <li class="mobile-menu__item">
+                  <a href="./index.html" class="link link--active">Студія</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="./portfolio.html" class="link">Портфоліо</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="./contact.html" class="link">Контакти</a>
+                </li>
+              </ul>
+              <div>
+                <ul class="mobile-contact">
+                  <li class="mobile-contact__item mobile-contact__item--blue">
+                    <a href="tel:+380961111111" class="mobile-contact__link">+38 096 111 11 11</a>
+                  </li>
+                  <li class="mobile-contact__item">
+                    <a href="mailto:info@devstudio.com" class="mobile-contact__link"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+                <ul class="mobile-social">
+                  <li class="mobile-social__item">
+                    <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      aria-label="Інстаграм"
+                      rel="noopener noreferrer nofollow"
+                      class="mobile-social__link"
+                      >Instagram</a
+                    >
+                  </li>
+                  <li class="mobile-social__item">
+                    <a
+                      href="https://twitter.com/"
+                      target="_blank"
+                      aria-label="Твітер"
+                      rel="noopener noreferrer nofollow"
+                      class="mobile-social__link"
+                      >Twitter</a
+                    >
+                  </li>
+                  <li class="mobile-social__item">
+                    <a
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      aria-label="Фейсбук"
+                      rel="noopener noreferrer nofollow"
+                      class="mobile-social__link"
+                      >Facebook</a
+                    >
+                  </li>
+                  <li class="mobile-social__item">
+                    <a
+                      href="https://ua.linkedin.com/"
+                      target="_blank"
+                      aria-label="Лінкедін"
+                      rel="noopener noreferrer nofollow"
+                      class="mobile-social__link"
+                      >LinkedIn</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -73,7 +156,7 @@
                 </button>
                 <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
                 <form autocomplete="off" class="form">
-                  <label for="name" class="modal__label">Ім'я</label>
+                  <label for="name" class="modal__name">Ім'я</label>
                   <div class="modal__list">
                     <input type="text" name="name" id="name" class="modal__input" /><svg
                       width="18px"
@@ -83,14 +166,14 @@
                       <use href="./images/icons.svg#person-black"></use>
                     </svg>
                   </div>
-                  <label for="tel" class="modal__label">Телефон</label>
+                  <label for="tel" class="modal__name">Телефон</label>
                   <div class="modal__list">
                     <input type="tel" name="tel" id="tel" class="modal__input" />
                     <svg width="18px" height="18px" class="modal__icon">
                       <use href="./images/icons.svg#phone-black"></use>
                     </svg>
                   </div>
-                  <label for="email" class="modal__label">Пошта</label>
+                  <label for="email" class="modal__name">Пошта</label>
                   <div class="modal__list">
                     <input type="email" name="email" id="email" class="modal__input" /><svg
                       width="18px"
@@ -100,7 +183,7 @@
                       <use href="./images/icons.svg#email-black"></use>
                     </svg>
                   </div>
-                  <label class="modal__label"
+                  <label class="modal__name"
                     >Коментар<textarea
                       name="feedback"
                       placeholder="Введіть текст"
@@ -231,17 +314,11 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/studia/ihordemianenko.jpg"
-                width="270"
-                height="260"
-                alt="Ігор Дем'яненко"
-                class="team__image"
-              />
+              <img />
               <div class="employee">
                 <h3 class="employee__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="employee__text">Product Designer</p>
-                <ul class="social__list">
+                <ul class="social">
                   <li class="social__item">
                     <a
                       href="https://www.instagram.com/"
@@ -250,7 +327,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#instagram" class="social__icon"></use>
                         </svg></div
@@ -264,7 +341,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#twitter" class="social__icon"></use>
                         </svg></div
@@ -278,7 +355,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#facebook" class="social__icon"></use>
                         </svg></div
@@ -292,7 +369,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#linkedin" class="social__icon"></use>
                         </svg></div
@@ -312,7 +389,7 @@
               <div class="employee">
                 <h3 class="employee__title">Ольга Рєпіна</h3>
                 <p lang="en" class="employee__text">Frontend Developer</p>
-                <ul class="social__list">
+                <ul class="social">
                   <li class="social__item">
                     <a
                       href="https://www.instagram.com/"
@@ -321,7 +398,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#instagram" class="social__icon"></use>
                         </svg></div
@@ -335,7 +412,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#twitter" class="social__icon"></use>
                         </svg></div
@@ -349,7 +426,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#facebook" class="social__icon"></use>
                         </svg></div
@@ -363,7 +440,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#linkedin" class="social__icon"></use>
                         </svg></div
@@ -383,7 +460,7 @@
               <div class="employee">
                 <h3 class="employee__title">Микола Тарасов</h3>
                 <p lang="en" class="employee__text">Marketing</p>
-                <ul class="social__list">
+                <ul class="social">
                   <li class="social__item">
                     <a
                       href="https://www.instagram.com/"
@@ -392,7 +469,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#instagram" class="social__icon"></use>
                         </svg></div
@@ -406,7 +483,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#twitter" class="social__icon"></use>
                         </svg></div
@@ -420,7 +497,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#facebook" class="social__icon"></use>
                         </svg></div
@@ -434,7 +511,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#linkedin" class="social__icon"></use>
                         </svg></div
@@ -454,7 +531,7 @@
               <div class="employee">
                 <h3 class="employee__title">Михайло Єрмаков</h3>
                 <p lang="en" class="employee__text">UI Designer</p>
-                <ul class="social__list">
+                <ul class="social">
                   <li class="social__item">
                     <a
                       href="https://www.instagram.com/"
@@ -463,7 +540,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#instagram" class="social__icon"></use>
                         </svg></div
@@ -477,7 +554,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#twitter" class="social__icon"></use>
                         </svg></div
@@ -491,7 +568,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#facebook" class="social__icon"></use>
                         </svg></div
@@ -505,7 +582,7 @@
                       rel="noopener noreferrer nofollow"
                       class="social__link"
                     >
-                      <div class="social">
+                      <div class="social__image">
                         <svg width="20" height="20">
                           <use href="./images/icons.svg#linkedin" class="social__icon"></use>
                         </svg></div
@@ -590,7 +667,7 @@
         <div class="footer__call">
           <h2 class="footer__title">Приєднуйтесь</h2>
           <div>
-            <ul class="social__list social__list--gray">
+            <ul class="social social--gray">
               <li class="social__item">
                 <a
                   href="https://www.instagram.com/"
@@ -598,7 +675,7 @@
                   aria-label="Інстаграм"
                   class="social__link"
                 >
-                  <div class="social social__footer">
+                  <div class="social__image social__footer">
                     <svg width="20" height="20">
                       <use href="./images/icons.svg#instagram" class="social__icon"></use>
                     </svg></div
@@ -611,7 +688,7 @@
                   aria-label="Твітер"
                   class="social__link"
                 >
-                  <div class="social social__footer">
+                  <div class="social__image social__footer">
                     <svg width="20" height="20">
                       <use href="./images/icons.svg#twitter" class="social__icon"></use>
                     </svg></div
@@ -624,7 +701,7 @@
                   aria-label="Фейсбук"
                   class="social__link"
                 >
-                  <div class="social social__footer">
+                  <div class="social__image social__footer">
                     <svg width="20" height="20">
                       <use href="./images/icons.svg#facebook" class="social__icon"></use>
                     </svg></div
@@ -637,7 +714,7 @@
                   aria-label="Лінкедін"
                   class="social__link"
                 >
-                  <div class="social social__footer">
+                  <div class="social__image social__footer">
                     <svg width="20" height="20">
                       <use href="./images/icons.svg#linkedin" class="social__icon"></use>
                     </svg></div
@@ -661,6 +738,13 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

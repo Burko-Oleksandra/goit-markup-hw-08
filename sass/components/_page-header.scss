@@ -1,4 +1,4 @@
-.page {
+.header {
   border-bottom: 1px solid #ececec;
 
   &__container {
@@ -79,30 +79,28 @@
     }
   }
 
-  .auth {
-    &__list {
-      display: none;
+  .contact {
+    display: none;
 
-      @media screen and (min-width: $tablet) {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
 
-        margin-left: auto;
-        width: 160px;
-        gap: 10px;
-      }
+      margin-left: auto;
+      width: 160px;
+      gap: 10px;
+    }
 
-      @media screen and (min-width: $desktop) {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: end;
-        width: 100%;
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: end;
+      width: 100%;
 
-        & .auth__item + .auth__item {
-          margin-left: 30px;
-        }
+      & .contact__item + .contact__item {
+        margin-left: 30px;
       }
     }
 

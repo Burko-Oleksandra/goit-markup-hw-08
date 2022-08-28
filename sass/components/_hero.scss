@@ -87,12 +87,39 @@
   margin-right: auto;
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/studia/solutions.jpg');
+    url('../../images/mob/studia/header-mob.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/mob/studia/header-mob@2x.jpg');
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/tablet/studio/header-tablet.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../../images/tablet/studio/header-tablet@2x.jpg');
+    }
+  }
+
   @media screen and (min-width: $desktop) {
     height: 600px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/desktop/studio/header-desktop.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../../images/desktop/studio/header-desktop@2x.jpg');
+    }
   }
 }
