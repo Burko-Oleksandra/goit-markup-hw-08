@@ -271,19 +271,49 @@
           <h2 class="process__title">Чим ми займаємося</h2>
           <ul class="process__list">
             <li class="process__item">
-              <img alt="Десктопні додатки" class="process__image" />
+              <img
+                srcset="
+                  ./images/desktop/studio/img1-desktop.jpg    1x,
+                  ./images/desktop/studio/img1-desktop@2x.jpg 2x
+                "
+                src="./images/desktop/studio/img1-desktop.jpg"
+                width="370"
+                height="294"
+                alt="Десктопні додатки"
+                class="process__image"
+              />
               <div class="services">
                 <h3 class="services__title">Десктопні додатки</h3>
               </div>
             </li>
             <li class="process__item">
-              <img alt="Мобільні додатки" class="process__image" />
+              <img
+                srcset="
+                  ./images/desktop/studio/img2-desktop.jpg    1x,
+                  ./images/desktop/studio/img2-desktop@2x.jpg 2x
+                "
+                src="./images/desktop/studio/img1-desktop.jpg"
+                width="370"
+                height="294"
+                alt="Мобільні додатки"
+                class="process__image"
+              />
               <div class="services">
                 <h3 class="services__title">Мобільні додатки</h3>
               </div>
             </li>
             <li class="process__item">
-              <img alt="Дизайнерські рішення" class="process__image" />
+              <img
+                srcset="
+                  ./images/desktop/studio/img3-desktop.jpg    1x,
+                  ./images/desktop/studio/img3-desktop@2x.jpg 2x
+                "
+                src="./images/desktop/studio/img1-desktop.jpg"
+                width="370"
+                height="294"
+                alt="Дизайнерські рішення"
+                class="process__image"
+              />
               <div class="services">
                 <h3 class="services__title">Дизайнерські рішення</h3>
               </div>
@@ -296,7 +326,34 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img alt="Ігор Дем'яненко" class="team__image" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/studio/ihordemianenko-desktop.jpg    1x,
+                    ./images/desktop/studio/ihordemianenko-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+
+                <source
+                  srcset="
+                    ./images/tablet/studio/ihordemianenko-tablet.jpg    1x,
+                    ./images/tablet/studio/ihordemianenko-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+
+                <source
+                  srcset="
+                    ./images/mob/studio/ihordemianenko-mob.jpg    1x,
+                    ./images/mob/studio/ihordemianenko-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)" />
+
+                <img
+                  src="./images/mob/studio/ihordemianenko-mob.jpg"
+                  alt="Ігор Дем'яненко"
+                  width="450"
+                  class="team__image"
+              /></picture>
               <div class="employee">
                 <h3 class="employee__title">Ігор Дем'яненко</h3>
                 <p lang="en" class="employee__text">Product Designer</p>
@@ -361,7 +418,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img alt="Ольга Рєпіна" class="team__image" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/studio/olhariepina-desktop.jpg    1x,
+                    ./images/desktop/studio/olhariepina-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+
+                <source
+                  srcset="
+                    ./images/tablet/studio/olhariepina-tablet.jpg    1x,
+                    ./images/tablet/studio/olhariepina-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+
+                <source
+                  srcset="
+                    ./images/mob/studio/olhariepina-mob.jpg    1x,
+                    ./images/mob/studio/olhariepina-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)" />
+
+                <img
+                  src="./images/mob/studio/olhariepina-mob.jpg"
+                  alt="Ольга Рєпіна"
+                  width="450"
+                  class="team__image"
+              /></picture>
               <div class="employee">
                 <h3 class="employee__title">Ольга Рєпіна</h3>
                 <p lang="en" class="employee__text">Frontend Developer</p>
@@ -426,7 +510,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img alt="Микола Тарасов" class="team__image" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/studio/mykolatarasov-desktop.jpg    1x,
+                    ./images/desktop/studio/mykolatarasov-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+
+                <source
+                  srcset="
+                    ./images/tablet/studio/mykolatarasov-tablet.jpg    1x,
+                    ./images/tablet/studio/mykolatarasov-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+
+                <source
+                  srcset="
+                    ./images/mob/studio/mykolatarasov-mob.jpg    1x,
+                    ./images/mob/studio/mykolatarasov-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)" />
+
+                <img
+                  src="./images/mob/studio/mykolatarasov-mob.jpg"
+                  alt="Микола Тарасов"
+                  width="450"
+                  class="team__image"
+              /></picture>
               <div class="employee">
                 <h3 class="employee__title">Микола Тарасов</h3>
                 <p lang="en" class="employee__text">Marketing</p>
@@ -491,7 +602,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img alt="Михайло Єрмаков" class="team__image" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/studio/mykhailoyermakov-desktop.jpg    1x,
+                    ./images/desktop/studio/mykhailoyermakov-desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+
+                <source
+                  srcset="
+                    ./images/tablet/studio/mykhailoyermakov-tablet.jpg    1x,
+                    ./images/tablet/studio/mykhailoyermakov-tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+
+                <source
+                  srcset="
+                    ./images/mob/studio/mykhailoyermakov-mob.jpg    1x,
+                    ./images/mob/studio/mykhailoyermakov-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)" />
+
+                <img
+                  src="./images/mob/studio/mykhailoyermakov-mob.jpg"
+                  alt="Михайло Єрмаков"
+                  width="450"
+                  class="team__image"
+              /></picture>
               <div class="employee">
                 <h3 class="employee__title">Михайло Єрмаков</h3>
                 <p lang="en" class="employee__text">UI Designer</p>
