@@ -54,6 +54,89 @@
             >
           </li>
         </ul>
+        <div class="mob-menu">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40"><use href="./images/icons.svg#menu"></use></svg>
+          </button>
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#cross"></use>
+              </svg>
+            </button>
+            <div class="mobile">
+              <ul class="mobile-menu">
+                <li class="mobile-menu__item">
+                  <a href="./index.html" class="link">Студія</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="./portfolio.html" class="link link--active">Портфоліо</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="./contact.html" class="link">Контакти</a>
+                </li>
+              </ul>
+              <div>
+                <ul class="mobile-contact">
+                  <li class="mobile-contact__item mobile-contact__item--blue">
+                    <a href="tel:+380961111111" class="mobile-contact__link">+38 096 111 11 11</a>
+                  </li>
+                  <li class="mobile-contact__item">
+                    <a href="mailto:info@devstudio.com" class="mobile-contact__link"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+                <ul class="mobile-social">
+                  <li class="mobile-social__item">
+                    <a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      aria-label="Інстаграм"
+                      rel="noopener noreferrer nofollow"
+                      class="mobile-social__link"
+                      >Instagram</a
+                    >
+                  </li>
+                  <li class="mobile-social__item">
+                    <a
+                      href="https://twitter.com/"
+                      target="_blank"
+                      aria-label="Твітер"
+                      rel="noopener noreferrer nofollow"
+                      class="mobile-social__link"
+                      >Twitter</a
+                    >
+                  </li>
+                  <li class="mobile-social__item">
+                    <a
+                      href="https://www.facebook.com/"
+                      target="_blank"
+                      aria-label="Фейсбук"
+                      rel="noopener noreferrer nofollow"
+                      class="mobile-social__link"
+                      >Facebook</a
+                    >
+                  </li>
+                  <li class="mobile-social__item">
+                    <a
+                      href="https://ua.linkedin.com/"
+                      target="_blank"
+                      aria-label="Лінкедін"
+                      rel="noopener noreferrer nofollow"
+                      class="mobile-social__link"
+                      >LinkedIn</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -83,13 +166,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/technokryak.jpg"
-                    width="370"
-                    height="294"
-                    alt="Технокряк"
-                    class="works__image"
-                  />
+                  <img alt="Технокряк" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -107,13 +184,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/neworlean.jpg"
-                    width="370"
-                    height="294"
-                    alt="Постер New Orlean vs Golden Star"
-                    class="works__image"
-                  />
+                  <img alt="Постер New Orlean vs Golden Star" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -131,13 +202,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/seafood.jpg"
-                    width="370"
-                    height="294"
-                    alt="Ресторан Seafood"
-                    class="works__image"
-                  />
+                  <img alt="Ресторан Seafood" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -155,13 +220,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/prime.jpg"
-                    width="370"
-                    height="294"
-                    alt="Проєкт Prime"
-                    class="works__image"
-                  />
+                  <img alt="Проєкт Prime" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -179,13 +238,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/boxes.jpg"
-                    width="370"
-                    height="294"
-                    alt="Проєкт Boxes"
-                    class="works__image"
-                  />
+                  <img alt="Проєкт Boxes" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -203,13 +256,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/inspiration.jpg"
-                    width="370"
-                    height="294"
-                    alt="Inspiration has no Borders"
-                    class="works__image"
-                  />
+                  <img alt="Inspiration has no Borders" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -227,13 +274,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/limitededition.jpg"
-                    width="370"
-                    height="294"
-                    alt="Видання Limited Edition"
-                    class="works__image"
-                  />
+                  <img alt="Видання Limited Edition" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -251,13 +292,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/lab.jpg"
-                    width="370"
-                    height="294"
-                    alt="Проект LAB"
-                    class="works__image"
-                  />
+                  <img alt="Проект LAB" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -275,13 +310,7 @@
             <li class="works__item">
               <a href="" class="works__link">
                 <div class="works__picture">
-                  <img
-                    src="./images/portfolio/growingbusiness.jpg"
-                    width="370"
-                    height="294"
-                    alt="Growing Business"
-                    class="works__image"
-                  />
+                  <img alt="Growing Business" class="works__image" />
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -400,5 +429,12 @@
         </div>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

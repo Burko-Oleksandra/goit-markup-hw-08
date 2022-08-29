@@ -218,6 +218,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
@@ -310,7 +311,7 @@ body {
     margin-left: 16px;
   }
 }
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 420px) {
   .mobile-social .mobile-social__item + .mobile-social__item {
     margin-left: 12px;
   }
@@ -322,7 +323,7 @@ body {
   letter-spacing: 0.02em;
   color: #2196f3;
 }
-.mobile-social__item::after {
+.mobile-social__item:not(:last-child)::after {
   content: "";
   position: absolute;
   margin-left: 10px;
@@ -330,6 +331,16 @@ body {
   height: 22px;
   border: 1px solid;
   color: rgba(33, 33, 33, 0.2);
+}
+@media screen and (max-width: 440px) {
+  .mobile-social__item:not(:last-child)::after {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .mobile-social__item:not(:last-child)::after {
+    margin-left: 6px;
+  }
 }
 @media screen and (max-width: 400px) {
   .mobile-social__item {
@@ -1262,19 +1273,13 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-@media screen and (min-width: 768px) {
-  .works__container {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 .works__tittle {
   display: none;
 }
 .works__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px 32px;
+  gap: 30px;
 }
 .works__item {
   max-width: 450px;
@@ -1283,9 +1288,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .works__item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     max-width: 354px;
     width: 100%;
   }
@@ -1295,6 +1297,11 @@ body {
     width: 370px;
     width: 100%;
   }
+}
+.works__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .works__link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1341,6 +1348,7 @@ body {
 }
 
 .portfolio {
+  flex-grow: 1;
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
