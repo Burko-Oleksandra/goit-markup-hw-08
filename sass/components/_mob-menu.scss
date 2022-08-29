@@ -1,6 +1,7 @@
 .menu-toggle {
   display: flex;
   align-items: center;
+  scroll-behavior: smooth;
 
   min-height: 40px;
   min-width: 40px;
@@ -26,7 +27,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
+  overflow: auto;
 
   width: 100vw;
   height: 100vh;
@@ -34,11 +36,15 @@
 
   background-color: $backgroundColor;
 
-  transform: translateY(-100%);
+  transform: translateX(-100%);
   transition: transform 250ms $timingFunction;
 
+  @media screen and (max-height: 480px) {
+    transform: translateX(-200%);
+  }
+
   &.is-open {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   & .menu-toggle {
@@ -98,6 +104,10 @@
 
     @media screen and (max-width: 400px) {
       font-size: 14px;
+    }
+
+    @media screen and (max-height: 510px) {
+      margin-top: 32px;
     }
 
     &--blue {
