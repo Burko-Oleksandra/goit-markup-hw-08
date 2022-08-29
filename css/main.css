@@ -197,7 +197,6 @@ body {
 .menu-toggle {
   display: flex;
   align-items: center;
-  scroll-behavior: smooth;
   min-height: 40px;
   min-width: 40px;
   margin: 0;
