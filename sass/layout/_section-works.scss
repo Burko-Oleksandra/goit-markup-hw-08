@@ -89,10 +89,14 @@
   transition: transform 250ms $timingFunction;
 
   &__text {
-    font-size: 18px;
-    line-height: 1.56;
+    font-size: 14px;
+    line-height: 1.6;
 
     color: $backgroundColor;
+
+    @media screen and (min-width: 365px) {
+      font-size: 18px;
+    }
   }
 }
 
